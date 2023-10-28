@@ -12,7 +12,6 @@ equation_label = customtkinter.StringVar()
 equation_text = ""
 
 # Funkce:
-
 def press_button(symbol):
     global equation_text
     
