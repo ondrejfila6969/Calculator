@@ -68,109 +68,109 @@ PI = math.pi
 label = customtkinter.CTkLabel(master=window, width = 100, height=18, text="Calculator", font=("Arial", 35))
 label.pack(pady = (25, 0))
 
-frame = customtkinter.CTkFrame(master=window, width=650, height=650, corner_radius=50)
+frame = customtkinter.CTkFrame(master=window, width=650, height=650, corner_radius=50, border_color="#000000", border_width=3)
 frame.pack(padx = 20, pady = 20)
 
-label_eq = customtkinter.CTkLabel(master=frame, textvariable = equation_label, width=600, height=60, font=("Arial", 30), fg_color="#fff", corner_radius=50, text_color="#000000")
+label_eq = customtkinter.CTkLabel(master=frame, textvariable = equation_label, width=600, height=60, font=("Arial", 30), fg_color="#fff", corner_radius=50, text_color="#000000", anchor="center")
 label_eq.grid(padx = 25, pady = (25, 0))
 
 frame2 = customtkinter.CTkFrame(master=frame, width=600, height=600, corner_radius=50)
 frame2.grid(padx = 40, pady = 25)
 
 # Row = 0
-btn_1 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="log", font = ("Arial", 20), fg_color = "#0000FF", command=lambda: press_button("log("))
+btn_1 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="log", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color = "#0000FF", command=lambda: press_button("log("))
 btn_1.grid(row = 0, column = 0, padx = (40, 5), pady = (10, 5))
 
-btn_2 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="e", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button(EULER_NUMBER))
+btn_2 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="e", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button(EULER_NUMBER))
 btn_2.grid(row = 0, column = 1, padx = 5, pady = (10, 5))
 
-btn_3 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="π", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button(PI))
+btn_3 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="π", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button(PI))
 btn_3.grid(row = 0, column = 2, padx = 5, pady = (10, 5))
 
-btn_4 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="(", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("("))
+btn_4 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="(", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("("))
 btn_4.grid(row = 0, column = 3, padx = 5, pady = (10, 5))
 
-btn_5 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=")", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button(")"))
+btn_5 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=")", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button(")"))
 btn_5.grid(row = 0, column = 4, padx = (5, 40), pady = (10, 5))
 
 # Row = 1
-btn_6 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="!", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("factorial("))
+btn_6 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="!", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("factorial("))
 btn_6.grid(row = 1, column = 0, padx = (40, 5), pady = 5)
 
-btn_7 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="√", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("square_root("))
+btn_7 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="√", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("square_root("))
 btn_7.grid(row = 1, column = 1, padx = 5, pady = 5)
 
-btn_8 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="x ^ y", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("**"))
+btn_8 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="x ^ y", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("**"))
 btn_8.grid(row = 1, column = 2, padx = 5, pady = 5)
 
-btn_9 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="1 / x", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("** -1"))
+btn_9 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="1 / x", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("** -1"))
 btn_9.grid(row = 1, column = 3, padx = 5, pady = 5)
 
-btn_10 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="C", font = ("Arial", 20), fg_color="#0000FF", command=clear)
+btn_10 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="C", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=clear)
 btn_10.grid(row = 1, column = 4, padx = (5, 40), pady = 5)
 
 # Row = 2
-btn_11 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="sin", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("sin("))
+btn_11 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="sin", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("sin("))
 btn_11.grid(row = 2, column = 0, padx = (40, 5), pady = 5)
 
-btn_12 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=1, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(1))
+btn_12 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=1, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(1))
 btn_12.grid(row = 2, column = 1, padx = 5, pady = 5)
 
-btn_13 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=2, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(2))
+btn_13 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=2, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(2))
 btn_13.grid(row = 2, column = 2, padx = 5, pady = 5)
 
-btn_14 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=3, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(3))
+btn_14 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=3, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(3))
 btn_14.grid(row = 2, column = 3, padx = 5, pady = 5)
 
-btn_15 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="+", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("+"))
+btn_15 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="+", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("+"))
 btn_15.grid(row = 2, column = 4, padx = (5, 40), pady = 5)
 
 # Row = 3
-btn_16 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="cos", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("cos("))
+btn_16 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="cos", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("cos("))
 btn_16.grid(row = 3, column = 0, padx = (40, 5), pady = 5)
 
-btn_17 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=4, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(4))
+btn_17 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=4, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(4))
 btn_17.grid(row = 3, column = 1, padx = 5, pady = 5)
 
-btn_18 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=5, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(5))
+btn_18 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=5, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(5))
 btn_18.grid(row = 3, column = 2, padx = 5, pady = 5)
 
-btn_19 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=6, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(6))
+btn_19 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=6, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(6))
 btn_19.grid(row = 3, column = 3, padx = 5, pady = 5)
 
-btn_20 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="-", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("-"))
+btn_20 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="-", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("-"))
 btn_20.grid(row = 3, column = 4, padx = (5, 40), pady = 5)
 
 # Row = 4
-btn_21 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="tg", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("tg("))
+btn_21 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="tg", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("tg("))
 btn_21.grid(row = 4, column = 0, padx = (40, 5), pady = 5)
 
-btn_22 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=7, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(7))
+btn_22 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=7, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(7))
 btn_22.grid(row = 4, column = 1, padx = 5, pady = 5)
 
-btn_23 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=8, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(8))
+btn_23 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=8, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(8))
 btn_23.grid(row = 4, column = 2, padx = 5, pady = 5)
 
-btn_24 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=9, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(9))
+btn_24 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=9, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(9))
 btn_24.grid(row = 4, column = 3, padx = 5, pady = 5)
 
-btn_25 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="*", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("*"))
+btn_25 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="*", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("*"))
 btn_25.grid(row = 4, column = 4, padx = (5, 40), pady = 5)
 
 # Row = 5
-btn_26 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="cotg", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("cotg("))
+btn_26 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="cotg", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("cotg("))
 btn_26.grid(row = 5, column = 0, padx = (40, 5), pady = (5, 10))
 
-btn_27 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=".", font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button("."))
+btn_27 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=".", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button("."))
 btn_27.grid(row = 5, column = 1, padx = 5, pady = (5, 10))
 
-btn_28 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=0, font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: press_button(0))
+btn_28 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text=0, font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: press_button(0))
 btn_28.grid(row = 5, column = 2, padx = 5, pady = (5, 10))
 
-btn_29 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="=", font = ("Arial", 20), fg_color="#fff", text_color="#0000FF", command=lambda: equals())
+btn_29 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="=", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#fff", text_color="#0000FF", command=lambda: equals())
 btn_29.grid(row = 5, column = 3, padx = 5, pady = (5, 10))
 
-btn_30 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="/", font = ("Arial", 20), fg_color="#0000FF", command=lambda: press_button("/"))
+btn_30 = customtkinter.CTkButton(master=frame2, width=100, corner_radius=20, height=60, text="/", font = ("Arial", 20), border_color="#000000", border_width=3, fg_color="#0000FF", command=lambda: press_button("/"))
 btn_30.grid(row = 5, column = 4, padx = (5, 40), pady = (5, 10))
 
 # Nastavení změny barvy textu a pozadí při najetí myši:
