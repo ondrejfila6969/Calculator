@@ -11,5 +11,6 @@
 
 
 <h3>+ ještě příloha, abyste se mohli pokochat, za mě je tato kalkulačka lepší než ta s*ačka na googlu, lépe zpracovaná samozřejmě xd</h3>
+<h5>Logaritmus je dekadický - základem je 10 ........</h5>
 
 ![ukázka](https://github.com/ondrejfila6969/Calculator/assets/114986357/3d75b3a9-535b-4ddc-a939-b6209421e10c)
