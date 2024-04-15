@@ -1,4 +1,4 @@
-# Kalkulačka - recept na vynikající domací perník
+# Recept na vynikající domací perník
 
 <h2>Otevřete si cmd (příkazový řádek :) - 0 IQ enjoyer detected omegalul xd) a budeme postupně zadávat tyto příkazy:</h2>
 <p>py --version = verze jazyka python, pokud nemáte stažený python v počítači tak => https://www.python.org/ :)</p>
